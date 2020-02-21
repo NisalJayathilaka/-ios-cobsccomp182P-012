@@ -384,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="3415" y="491"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Events View Controller-->
         <scene sceneID="sGG-9R-aWH">
             <objects>
-                <viewController id="9oy-QF-bD5" sceneMemberID="viewController">
+                <viewController id="9oy-QF-bD5" customClass="AddEventsViewController" customModule="nibmevnt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kei-i1-zBA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,14 +416,27 @@
                                     <constraint firstAttribute="height" constant="50" id="DVn-vp-KsD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addbtn:" destination="9oy-QF-bD5" eventType="touchUpInside" id="eqB-HJ-9xn"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S4s-y1-who">
+                                <rect key="frame" x="67" y="412" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="iqh-00-Mn8"/>
+                                    <constraint firstAttribute="height" constant="128" id="vVB-Xo-ib7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="S4s-y1-who" firstAttribute="top" secondItem="Zxt-Ia-MGn" secondAttribute="bottom" constant="44" id="3iL-RM-1Yx"/>
                             <constraint firstItem="Xgl-8s-AgV" firstAttribute="trailing" secondItem="Zxt-Ia-MGn" secondAttribute="trailing" constant="15" id="CjC-9e-aXK"/>
                             <constraint firstItem="1VT-7A-yzm" firstAttribute="top" secondItem="9WB-UW-5eu" secondAttribute="bottom" constant="32" id="WEd-bc-6x2"/>
+                            <constraint firstItem="S4s-y1-who" firstAttribute="leading" secondItem="Xgl-8s-AgV" secondAttribute="leading" constant="67" id="Y7S-Oz-fjf"/>
                             <constraint firstItem="Xgl-8s-AgV" firstAttribute="trailing" secondItem="1VT-7A-yzm" secondAttribute="trailing" constant="16" id="a2w-gT-Hrx"/>
                             <constraint firstItem="9WB-UW-5eu" firstAttribute="top" secondItem="Xgl-8s-AgV" secondAttribute="top" constant="98" id="apT-yX-wQq"/>
+                            <constraint firstItem="Xgl-8s-AgV" firstAttribute="trailing" secondItem="S4s-y1-who" secondAttribute="trailing" constant="68" id="mex-NO-1h3"/>
                             <constraint firstItem="9WB-UW-5eu" firstAttribute="leading" secondItem="Xgl-8s-AgV" secondAttribute="leading" constant="15" id="mzb-sK-r8C"/>
                             <constraint firstItem="Zxt-Ia-MGn" firstAttribute="top" secondItem="1VT-7A-yzm" secondAttribute="bottom" constant="68" id="oCb-JT-Vx9"/>
                             <constraint firstItem="1VT-7A-yzm" firstAttribute="leading" secondItem="Xgl-8s-AgV" secondAttribute="leading" constant="14" id="psR-Q6-dBt"/>
@@ -432,6 +445,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xgl-8s-AgV"/>
                     </view>
+                    <connections>
+                        <outlet property="event" destination="9WB-UW-5eu" id="1rZ-aj-Twm"/>
+                        <outlet property="place" destination="1VT-7A-yzm" id="fN7-ox-02U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdh-6g-CYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

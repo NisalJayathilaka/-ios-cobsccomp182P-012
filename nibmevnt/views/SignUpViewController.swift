@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
             let email = emailtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = phonenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let zipcode = passtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+//            let imageurl = profilepic.image!
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
@@ -110,6 +110,7 @@ class SignUpViewController: UIViewController {
                      "lastname" : lastName,
                      "email" : email,
                      " zipcode" : zipcode,
+                     "image" : "gs://nevents-c2256.appspot.com/profile_image/"+result!.user.uid,
                      "uid" : result!.user.uid])
                     { (error) in
                         

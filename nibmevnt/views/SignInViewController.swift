@@ -26,25 +26,22 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupelments()
-        self.configurecomponents()
+//        self.configurecomponents()
     }
     
     func setupelments() {
         errorLable.alpha=0
     }
     
-    func configurecomponents() {
-        if Auth.auth().currentUser != nil {
-            DispatchQueue.main.async {
-                let naController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HOViewController
-                self.present(naController, animated: true, completion: nil)
-                
-                //                let naController = UINavigationController(rootViewController: SignInViewController())
-                //                naController.navigationBar.barStyle = .black
-                //                self.present(naController, animated: true, completion: nil)
-            }
-        }
-    }
+//    func configurecomponents() {
+//        if Auth.auth().currentUser != nil {
+//            DispatchQueue.main.async {
+//                let naController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HOViewController
+//                self.present(naController, animated: true, completion: nil)
+//
+//            }
+//        }
+//    }
     
     @IBAction func signinTapped(_ sender: Any) {
         
