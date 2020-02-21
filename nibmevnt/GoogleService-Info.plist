@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>559791534906-bnk16ol6t36na9qkvk3qpjdgjajjhn4k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.559791534906-bnk16ol6t36na9qkvk3qpjdgjajjhn4k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCo7dUTlr_rX3u4L7AEFgNS2wT7SYLis4w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>559791534906</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nibm.nibmevntc</string>
+	<key>PROJECT_ID</key>
+	<string>nevents-c2256</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nevents-c2256.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:559791534906:ios:59c472ca75dcb32ce3d603</string>
+	<key>DATABASE_URL</key>
+	<string>https://nevents-c2256.firebaseio.com</string>
+</dict>
+</plist>
