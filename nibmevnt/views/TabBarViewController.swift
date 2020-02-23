@@ -1,14 +1,14 @@
 //
-//  HOViewController.swift
+//  TabBarViewController.swift
 //  nibmevnt
 //
-//  Created by nisal jayathilaka on 2/20/20.
+//  Created by nisal jayathilaka on 2/23/20.
 //  Copyright © 2020 nisal jayathilaka. All rights reserved.
 //
 
 import UIKit
 
-class HOViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,5 +17,6 @@ class HOViewController: UIViewController {
     }
     
 
+    
 
 }

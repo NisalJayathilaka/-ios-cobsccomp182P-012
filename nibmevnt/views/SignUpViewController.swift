@@ -64,6 +64,17 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signupTapped(_ sender: Any) {
         
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        self.present(alert, animated: true, completion: nil)
+        //////////////////////////////////////////////////////////////////
+        
         let error = validateFields()
         if error != nil
         {
@@ -75,8 +86,8 @@ class SignUpViewController: UIViewController {
             let firstName = firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = phonenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let zipcode = passtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let contact = phonenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 //            let imageurl = profilepic.image!
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -87,15 +98,44 @@ class SignUpViewController: UIViewController {
                 }
                 else{
                     let db = Firestore.firestore()
-                    
                     let stroageRef = Storage.storage().reference(forURL: "gs://nevents-c2256.appspot.com").child("profile_image").child(result!.user.uid)
+                    
                     if let profileImage = self.selectedImage, let imageData = profileImage.jpegData(compressionQuality: 0.1)
                     {
-                        stroageRef.putData(imageData, metadata: nil, completion: { (metadata, error ) in
+                        let metaData = StorageMetadata()
+                        metaData.contentType = "image/jpg"
+                        
+                        stroageRef.putData(imageData, metadata: metaData, completion: { (metadata, error ) in
                             if error != nil{
                                 self.showError("Error in uploading profile photo.")
                             }
+                            
+                            stroageRef.downloadURL(completion: { (url, error) in
+                                        if let metaImageUrl = url?.absoluteString{
+                                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+                                            print(metaImageUrl)
 
+                                            db.collection("user").document(result!.user.uid).setData(
+                                                
+                                                ["firstname" : firstName,
+                                                 "lastname" : lastName,
+                                                 "email" : email,
+                                                 " contact" : contact,
+                                                 "image" : metaImageUrl,
+                                                 "uid" : result!.user.uid])
+                                            { (error) in
+                                                
+                                                if error != nil {
+                                                    self.showError("error saving user data")
+                                                }
+                                            }
+                                            self.movetohome()
+                                           
+                                          
+
+
+                                        }
+                                    })
 
                         })
 
@@ -104,21 +144,21 @@ class SignUpViewController: UIViewController {
                     
                     
                     ////////////////////////////////////////
-                    db.collection("user").addDocument(data:
-                        
-                    ["firstname" : firstName,
-                     "lastname" : lastName,
-                     "email" : email,
-                     " zipcode" : zipcode,
-                     "image" : "gs://nevents-c2256.appspot.com/profile_image/"+result!.user.uid,
-                     "uid" : result!.user.uid])
-                    { (error) in
-                        
-                        if error != nil {
-                            self.showError("error saving user data")
-                        }
-                    }
-                    self.movetohome()
+//                    db.collection("user").document(result!.user.uid).setData(
+//
+//                    ["firstname" : firstName,
+//                     "lastname" : lastName,
+//                     "email" : email,
+//                     " contact" : contact,
+//                     "image" : "gs://nevents-c2256.appspot.com/profile_image/"+result!.user.uid,
+//                     "uid" : result!.user.uid])
+//                    { (error) in
+//
+//                        if error != nil {
+//                            self.showError("error saving user data")
+//                        }
+//                    }
+//                    self.movetohome()
                 }
                 
             }
@@ -134,11 +174,11 @@ class SignUpViewController: UIViewController {
     }
     func movetohome() {
         
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constans.Storyboard.homeViewController) as?
-        HOViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarViewController
+        appDelegate.window?.rootViewController = yourVC
+        appDelegate.window?.makeKeyAndVisible()
         
         
     }
@@ -178,5 +218,4 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
         dismiss(animated: true, completion: nil)
     }
 }
-
 
