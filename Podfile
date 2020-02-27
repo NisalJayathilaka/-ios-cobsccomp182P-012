@@ -6,7 +6,8 @@ target 'nibmevnt' do
   use_frameworks!
 
   # Pods for nibmevnt
-pod 'Firebase/Analytics'
+    pod 'Firebase/Analytics'
+    pod 'SwiftyJSON'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Firebase/Firestore'

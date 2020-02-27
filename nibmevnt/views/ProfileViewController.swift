@@ -40,11 +40,12 @@ class ProfileViewController: UIViewController {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document datta: \(dataDescription)")
+                print("Document data: \(dataDescription)")
                 
                 self.frstname.text = (document.get("firstname") as! String)
                 self.lastname.text = (document.get("lastname") as! String)
-                self.contactnum.text = (document.get("contact") as! String?)
+                self.contactnum.text = (document.get("contact") as! String)
+                
                 
                 let propic = (document.get("image") as! String)
                 self.profieimg.kf.setImage(with: URL(string: propic), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)

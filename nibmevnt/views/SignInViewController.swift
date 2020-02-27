@@ -26,35 +26,35 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupelments()
-//        self.configurecomponents()
+     // self.configurecomponents()
     }
     
     func setupelments() {
         errorLable.alpha=0
     }
     
-//    func configurecomponents() {
-//        if Auth.auth().currentUser != nil {
-//            DispatchQueue.main.async {
-//                let naController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HOViewController
-//                self.present(naController, animated: true, completion: nil)
-//
-//            }
-//        }
-//    }
+    func configurecomponents() {
+        if Auth.auth().currentUser != nil {
+            DispatchQueue.main.async {
+                let naController = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarViewController
+                self.present(naController, animated: true, completion: nil)
+
+            }
+        }
+    }
     
     @IBAction func signinTapped(_ sender: Any) {
         
-        
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-        
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
-        
-        alert.view.addSubview(loadingIndicator)
-        self.present(alert, animated: true, completion: nil)
+//
+//        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+//
+//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+//        loadingIndicator.startAnimating();
+//
+//        alert.view.addSubview(loadingIndicator)
+//        self.present(alert, animated: true, completion: nil)
         ////////////////////////////////////////////////////////////////////////
         
         let email = emailtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)

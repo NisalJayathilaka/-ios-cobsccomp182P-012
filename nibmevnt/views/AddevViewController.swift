@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
+
 
 class AddevViewController: UIViewController {
     
@@ -68,13 +72,66 @@ class AddevViewController: UIViewController {
             showError(error!)
         }
         else{
+             let db = Firestore.firestore()
+            
             let evnetTitle = evtitle.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let eventdicription = evdiscription.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            guard let uid = Auth.auth().currentUser?.uid
+                else{return}
+            print(uid)
+            let stroageRef = Storage.storage().reference(forURL: "gs://nevents-c2256.appspot.com").child("Event_image").child(uid)
+            
+            if let profileImage = self.selectedImage, let imageData = profileImage.jpegData(compressionQuality: 0.1)
+            {
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpg"
+                
+                stroageRef.putData(imageData, metadata: metaData, completion: { (metadata, error ) in
+                    if error != nil{
+                        self.showError("Error in uploading profile photo.")
+                    }
+                    
+                    stroageRef.downloadURL(completion: { (url, error) in
+                        if let metaImageUrl = url?.absoluteString{
+                            print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+                            print(metaImageUrl)
+                            
+                            
+                            let dt: [String: String] = ["eventTitle" : evnetTitle,
+                                       "discription" : eventdicription,
+                                       "image" : metaImageUrl,
+                                       "userid" : uid
+                                ]
+                            db.collection("event").addDocument(data: dt) {(error) in
+                                if (error != nil) {
+                                    print ("failed")
+                                } else {
+                                    print ("data added")
+                                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarVC")
+                                    self.present(vc, animated: true, completion: nil)
+                                    
+                                }
+                            }
+                            
+                            
+                           
+                            
+                            
+                            
+                            
+                        }
+                    })
+                    
+                })
+                
+            }
+            
+            
         }
        ////////////////////////////////////////////////////////
         //alert.dismiss(animated: false, completion: nil)
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarVC")
-        self.present(vc, animated: true, completion: nil)
+       
     }
     
     

@@ -64,15 +64,15 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signupTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
-        
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
-        
-        alert.view.addSubview(loadingIndicator)
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+//
+//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+//        loadingIndicator.startAnimating();
+//
+//        alert.view.addSubview(loadingIndicator)
+//        self.present(alert, animated: true, completion: nil)
         //////////////////////////////////////////////////////////////////
         
         let error = validateFields()
@@ -86,7 +86,7 @@ class SignUpViewController: UIViewController {
             let firstName = firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let contact = phonenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let contacts = phonenumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 //            let imageurl = profilepic.image!
             
@@ -120,7 +120,7 @@ class SignUpViewController: UIViewController {
                                                 ["firstname" : firstName,
                                                  "lastname" : lastName,
                                                  "email" : email,
-                                                 " contact" : contact,
+                                                 "contact" : contacts,
                                                  "image" : metaImageUrl,
                                                  "uid" : result!.user.uid])
                                             { (error) in
@@ -143,22 +143,7 @@ class SignUpViewController: UIViewController {
                     
                     
                     
-                    ////////////////////////////////////////
-//                    db.collection("user").document(result!.user.uid).setData(
-//
-//                    ["firstname" : firstName,
-//                     "lastname" : lastName,
-//                     "email" : email,
-//                     " contact" : contact,
-//                     "image" : "gs://nevents-c2256.appspot.com/profile_image/"+result!.user.uid,
-//                     "uid" : result!.user.uid])
-//                    { (error) in
-//
-//                        if error != nil {
-//                            self.showError("error saving user data")
-//                        }
-//                    }
-//                    self.movetohome()
+                   
                 }
                 
             }
