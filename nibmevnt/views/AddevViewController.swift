@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class AddevViewController: UIViewController {
     
-
+    
     @IBOutlet weak var evntImage: UIImageView!
     @IBOutlet weak var evtitle: UITextField!
     @IBOutlet weak var evdiscription: UITextField!
@@ -38,7 +38,7 @@ class AddevViewController: UIViewController {
         {
             return "please fill in all fields."
         }
-    
+        
         return nil
     }
     
@@ -61,8 +61,8 @@ class AddevViewController: UIViewController {
         present(imagepickercontroller, animated: true, completion: nil)
         //print("tapped")
     }
-
-   
+    
+    
     @IBAction func addEventTapped(_ sender: Any) {
         ////////////////////////////////////////////////////////
         
@@ -72,7 +72,7 @@ class AddevViewController: UIViewController {
             showError(error!)
         }
         else{
-             let db = Firestore.firestore()
+            let db = Firestore.firestore()
             
             let evnetTitle = evtitle.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let eventdicription = evdiscription.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -99,10 +99,10 @@ class AddevViewController: UIViewController {
                             
                             
                             let dt: [String: String] = ["eventTitle" : evnetTitle,
-                                       "discription" : eventdicription,
-                                       "image" : metaImageUrl,
-                                       "userid" : uid
-                                ]
+                                                        "discription" : eventdicription,
+                                                        "image" : metaImageUrl,
+                                                        "userid" : uid
+                            ]
                             db.collection("event").addDocument(data: dt) {(error) in
                                 if (error != nil) {
                                     print ("failed")
@@ -114,11 +114,7 @@ class AddevViewController: UIViewController {
                                 }
                             }
                             
-                            
-                           
-                            
-                            
-                            
+
                             
                         }
                     })
@@ -129,9 +125,9 @@ class AddevViewController: UIViewController {
             
             
         }
-       ////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////
         //alert.dismiss(animated: false, completion: nil)
-       
+        
     }
     
     

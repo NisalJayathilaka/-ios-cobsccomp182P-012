@@ -41,42 +41,11 @@ class HomeTableViewController: UITableViewController {
         self.fetchEvents()
         
         nothingToShow()
-        
-//        guard let uid = Auth.auth().currentUser?.uid
-//            else{return}
-        
-        
-        
-//        print(db)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func fetchEvents() {
-//        let db = Firestore.firestore()
-//        db.collection("event").getDocuments() {[weak self](snapShot, error) in
-//            guard let `self` = self else {return}
-//
-//            if (error != nil) {
-////                print(error?.localizedDescription as! Stirng)
-//            } else {
-//                let events = snapShot?.documents
-//                for event in events! {
-//                    let data = event.data().values
-//
-//                    print(data)
-////                    self.Event.append(data)
-//                }
-//            }
-//        }
-        
-        
-        
-        
+
         let db = Firestore.firestore()
         db.collection("event").getDocuments() { (querySnapshot, err) in
             if let err = err {

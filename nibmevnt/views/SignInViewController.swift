@@ -26,7 +26,7 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupelments()
-     // self.configurecomponents()
+      self.configurecomponents()
     }
     
     func setupelments() {
