@@ -15,6 +15,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventimage: UIImageView!
     @IBOutlet weak var evtitle: UILabel!
     @IBOutlet weak var evdiscription: UILabel!
+    @IBOutlet weak var likebtn: UIButton!
     
     var event: Event! {
         didSet {
@@ -52,5 +53,19 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
+    @IBAction func likedbtn(_ sender: Any) {
+        
+        if likebtn.tag == 0
+        {
+            likebtn.setImage(UIImage(named: "notgoing"), for: .normal)
+            likebtn.tag = 1
+        }
+        else{
+            likebtn.setImage(UIImage(named: "goingimg"), for: .normal)
+            likebtn.tag = 0
+        }
+    }
+    
 }

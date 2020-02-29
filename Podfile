@@ -13,6 +13,7 @@ target 'nibmevnt' do
     pod 'Firebase/Firestore'
     pod 'Firebase/Storage'
     pod 'Kingfisher', '~> 5.0'
+    pod 'BiometricAuthentication'
 
   target 'nibmevntTests' do
     inherit! :search_paths

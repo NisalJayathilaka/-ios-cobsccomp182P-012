@@ -34,17 +34,27 @@
                                 <color key="textColor" red="0.0" green="0.048525278810000003" blue="0.39177506350000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-hY-9Rb">
+                                <rect key="frame" x="177" y="383" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="lbS-WB-M2C"/>
+                                    <constraint firstAttribute="width" constant="20" id="yaJ-FP-dvQ"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KtQ-ra-NZJ" firstAttribute="top" secondItem="Que-tv-Fh6" secondAttribute="bottom" constant="-25" id="57Y-D1-SKb"/>
                             <constraint firstItem="Que-tv-Fh6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="207" id="Nd7-0r-zKX"/>
+                            <constraint firstItem="BjA-hY-9Rb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="PrF-4w-CSq"/>
                             <constraint firstItem="KtQ-ra-NZJ" firstAttribute="top" secondItem="Que-tv-Fh6" secondAttribute="bottom" constant="-25" id="Uxb-Xz-OFu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KtQ-ra-NZJ" secondAttribute="trailing" constant="117" id="aG6-zP-eee"/>
                             <constraint firstItem="Que-tv-Fh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="ad2-qF-nY5"/>
+                            <constraint firstItem="BjA-hY-9Rb" firstAttribute="top" secondItem="KtQ-ra-NZJ" secondAttribute="bottom" constant="18" id="p6o-fu-QM3"/>
                             <constraint firstItem="KtQ-ra-NZJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="pyE-6P-wwh"/>
                             <constraint firstItem="KtQ-ra-NZJ" firstAttribute="top" secondItem="Que-tv-Fh6" secondAttribute="bottom" constant="-25" id="qPp-hb-HlE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Que-tv-Fh6" secondAttribute="trailing" constant="67.5" id="shG-4j-kXX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BjA-hY-9Rb" secondAttribute="trailing" constant="178" id="ulr-Aj-dJ9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

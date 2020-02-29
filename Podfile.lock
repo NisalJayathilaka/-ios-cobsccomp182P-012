@@ -158,6 +158,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - BiometricAuthentication (3.1.2)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -292,6 +293,7 @@ PODS:
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - BiometricAuthentication
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -303,6 +305,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - abseil
+    - BiometricAuthentication
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -330,6 +333,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
+  BiometricAuthentication: 36445f3ab77699489f91995bed887be89890afac
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: 497158b816d0a86fc31babbd05546fcd7e6083ff
   FirebaseAnalytics: cf95d3aab897612783020fbd98401d5366f135ee
@@ -355,6 +359,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: b47cd1e7cfe69f959e0247c49383c6c532f00742
+PODFILE CHECKSUM: 092ed3e219f4b669e358c3db49aa324d534b3560
 
 COCOAPODS: 1.8.4

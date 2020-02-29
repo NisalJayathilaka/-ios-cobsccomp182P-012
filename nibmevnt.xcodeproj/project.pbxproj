@@ -55,7 +55,7 @@
 		5FAC222D10BBA1358A596328 /* Pods-nibmevnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nibmevnt.release.xcconfig"; path = "Target Support Files/Pods-nibmevnt/Pods-nibmevnt.release.xcconfig"; sourceTree = "<group>"; };
 		6E646BBB2400D18E003FE7A9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6E646BBF2400D236003FE7A9 /* AddevViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddevViewController.swift; sourceTree = "<group>"; };
-		6E9682512401FAA5005F5ED7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6E9682512401FAA5005F5ED7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "../New Group/TabBarViewController.swift"; sourceTree = "<group>"; };
 		6E9682532403654B005F5ED7 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		6E968255240365F6005F5ED7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		6ED9EFF42404F6750014DA75 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -125,6 +125,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6ED9F0092408C92F0014DA75 /* Login Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6EE8145523FE0CD60030171F /* ResetPasswordViewController.swift */,
+				6EFFD6A423FE058D004125C7 /* SignInViewController.swift */,
+				6EFFD6A623FE05A0004125C7 /* SignUpViewController.swift */,
+			);
+			path = "Login Controller";
+			sourceTree = "<group>";
+		};
+		6ED9F00A2408CA7C0014DA75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6EFFD67723FDFD10004125C7 /* Main.storyboard */,
+				6EFFD67F23FDFD13004125C7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6ED9F00B2408CAAD0014DA75 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6EFFD67323FDFD10004125C7 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		6ED9F00C2408CAED0014DA75 /* TabBar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E9682512401FAA5005F5ED7 /* TabBarViewController.swift */,
+			);
+			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
 		6EE8146723FE6AEF0030171F /* help */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +195,13 @@
 		6EFFD67223FDFD10004125C7 /* nibmevnt */ = {
 			isa = PBXGroup;
 			children = (
+				6ED9F00C2408CAED0014DA75 /* TabBar Controller */,
+				6ED9F00B2408CAAD0014DA75 /* App Delegate */,
+				6ED9F00A2408CA7C0014DA75 /* Storyboards */,
 				6EE8146723FE6AEF0030171F /* help */,
 				6EFFD6A823FE05A8004125C7 /* views */,
-				6EFFD67323FDFD10004125C7 /* AppDelegate.swift */,
-				6EFFD67723FDFD10004125C7 /* Main.storyboard */,
+				6ED9F0092408C92F0014DA75 /* Login Controller */,
 				6EFFD67D23FDFD13004125C7 /* Assets.xcassets */,
-				6EFFD67F23FDFD13004125C7 /* LaunchScreen.storyboard */,
 				6EFFD68223FDFD13004125C7 /* Info.plist */,
 				6EFFD67A23FDFD10004125C7 /* nibmevnt.xcdatamodeld */,
 				6EE8146523FE5FA20030171F /* GoogleService-Info.plist */,
@@ -194,12 +230,8 @@
 		6EFFD6A823FE05A8004125C7 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				6EFFD6A423FE058D004125C7 /* SignInViewController.swift */,
-				6EFFD6A623FE05A0004125C7 /* SignUpViewController.swift */,
-				6EE8145523FE0CD60030171F /* ResetPasswordViewController.swift */,
 				6E646BBB2400D18E003FE7A9 /* ProfileViewController.swift */,
 				6E646BBF2400D236003FE7A9 /* AddevViewController.swift */,
-				6E9682512401FAA5005F5ED7 /* TabBarViewController.swift */,
 				6E9682532403654B005F5ED7 /* HomeTableViewController.swift */,
 				6E968255240365F6005F5ED7 /* EventTableViewCell.swift */,
 				6ED9EFFF2407B7390014DA75 /* UserInfoViewController.swift */,

@@ -155,10 +155,6 @@ class ProfileViewController: UIViewController {
                                 }
                             }
                             
-                            
-                            
-                            
-                            
                         }
                     })
                     
