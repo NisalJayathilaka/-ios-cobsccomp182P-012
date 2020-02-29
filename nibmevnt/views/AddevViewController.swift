@@ -101,8 +101,11 @@ class AddevViewController: UIViewController {
                             let dt: [String: String] = ["eventTitle" : evnetTitle,
                                                         "discription" : eventdicription,
                                                         "image" : metaImageUrl,
-                                                        "userid" : uid
+                                                        "userid" : uid,
+                                                        
+                                                        
                             ]
+                           // let evid = db.collection("event").document(uid)
                             db.collection("event").addDocument(data: dt) {(error) in
                                 if (error != nil) {
                                     print ("failed")
