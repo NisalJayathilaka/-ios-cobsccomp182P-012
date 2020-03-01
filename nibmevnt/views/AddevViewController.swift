@@ -79,8 +79,14 @@ class AddevViewController: UIViewController {
             
             guard let uid = Auth.auth().currentUser?.uid
                 else{return}
+           
             print(uid)
             let stroageRef = Storage.storage().reference(forURL: "gs://nevents-c2256.appspot.com").child("Event_image").child(uid)
+           
+            
+            let evntID = UUID().uuidString
+            print(evntID)
+            
             
             if let profileImage = self.selectedImage, let imageData = profileImage.jpegData(compressionQuality: 0.1)
             {
@@ -102,6 +108,7 @@ class AddevViewController: UIViewController {
                                                         "discription" : eventdicription,
                                                         "image" : metaImageUrl,
                                                         "userid" : uid,
+                                                        "eventid" : evntID
                                                         
                                                         
                             ]
@@ -113,6 +120,8 @@ class AddevViewController: UIViewController {
                                     print ("data added")
                                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarVC")
                                     self.present(vc, animated: true, completion: nil)
+                                    
+                                    
                                     
                                 }
                             }
