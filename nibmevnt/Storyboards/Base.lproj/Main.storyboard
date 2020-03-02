@@ -109,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pEM-iF-C3X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06B-lZ-TIo"/>
                             <constraint firstItem="VVJ-0A-TbE" firstAttribute="top" secondItem="dEP-mL-jCb" secondAttribute="bottom" constant="55" id="2E6-th-G3w"/>
@@ -186,7 +186,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Ff-OI-vEm" firstAttribute="leading" secondItem="pH3-dL-6c8" secondAttribute="leading" constant="20" id="07K-PQ-kj2"/>
                             <constraint firstItem="2Ff-OI-vEm" firstAttribute="top" secondItem="yyX-Dt-6k0" secondAttribute="bottom" constant="80" id="3xH-no-xOd"/>
@@ -236,6 +236,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="87W-4E-F7Y">
                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
@@ -303,7 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NEE-Rw-2dA" firstAttribute="leading" secondItem="TXa-Ge-SAG" secondAttribute="leading" constant="15" id="0hz-vR-BOe"/>
                             <constraint firstItem="TXa-Ge-SAG" firstAttribute="trailing" secondItem="dx0-Fj-txA" secondAttribute="trailing" constant="15" id="CRc-97-umt"/>
@@ -370,6 +371,7 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fi4-Dl-Smy">
                                 <rect key="frame" x="15" y="280" width="345" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BBH-sz-8dH"/>
                                 </constraints>
@@ -410,7 +412,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0nd-pG-51W" firstAttribute="leading" secondItem="odJ-pl-eug" secondAttribute="leading" constant="20" id="56f-Gt-1ZL"/>
                             <constraint firstItem="fi4-Dl-Smy" firstAttribute="top" secondItem="S7W-XF-RHj" secondAttribute="bottom" constant="78" id="58a-sF-0gc"/>
@@ -527,7 +529,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lit-Ia-V4h" firstAttribute="top" secondItem="8iP-Wq-L1J" secondAttribute="bottom" constant="27" id="2Dg-Bm-eKb"/>
                             <constraint firstItem="Sj6-z7-ed5" firstAttribute="trailing" secondItem="obj-gm-3nz" secondAttribute="trailing" constant="15" id="2GK-dL-Wte"/>
@@ -613,7 +615,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aOz-UE-0Ml">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.64313725490196072" green="0.69019607843137254" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventTableViewCell" rowHeight="260" id="uYm-CW-fBP" customClass="EventTableViewCell" customModule="nibmevnt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="260"/>
@@ -796,7 +798,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.92473779970000003" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P5g-RN-f5N" firstAttribute="trailing" secondItem="gRf-rv-4DY" secondAttribute="trailing" constant="31" id="0nB-al-TlY"/>
                             <constraint firstItem="3p4-4c-xEx" firstAttribute="leading" secondItem="Tak-Ty-YhU" secondAttribute="trailing" constant="39" id="1c8-SC-nIP"/>
